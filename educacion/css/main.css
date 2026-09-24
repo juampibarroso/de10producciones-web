@@ -1,0 +1,600 @@
+/*===============Propiedades Globales================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.paytone-one-regular {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #000000;
+}
+
+h2 {
+    font-size: 3rem;
+    /* Tamaño de fuente más pequeño */
+}
+
+
+/*===================NAVBAR==========================*/
+.navbar {
+    background-color: #000000;
+    /* Superposición  position: absolute;*/
+    width: 100%;
+    z-index: 1;
+    /* Se muestra por encima del carrusel */
+
+}
+
+/* Agrega un borde al botón hamburguesa */
+.navbar-toggler {
+    border: 1px solid #fff;
+    /* Establece un borde sólido de 1px de ancho y color blanco */
+    border-radius: 4px;
+    /* Opcional: agrega esquinas redondeadas al borde */
+}
+
+/*===================HOME==========================*/
+
+
+
+/*===================TARJETAS==========================*/
+.card {
+    height: 500px;
+    /* Altura fija para todas las tarjetas */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para que cubra toda la tarjeta */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center;
+    /* Centra la imagen */
+    position: relative;
+    /* Añadido para el efecto hover */
+    overflow: hidden;
+    /* Añadido para el efecto hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    /* Sombra alrededor de la tarjeta */
+
+}
+
+.card .card-body {
+    opacity: 0;
+    /* Oculta el contenido por defecto */
+    transition: opacity 0.5s ease;
+    /* Transición suave al mostrar el contenido */
+    position: absolute;
+    /* Añadido para el efecto hover */
+    top: 0;
+    /* Añadido para el efecto hover */
+    left: 0;
+    /* Añadido para el efecto hover */
+    right: 0;
+    /* Añadido para el efecto hover */
+    bottom: 0;
+    /* Añadido para el efecto hover */
+    padding: 20px;
+    /* Añadido para el efecto hover */
+    color: #fff;
+    /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo semi-transparente */
+}
+
+.card:hover .card-body {
+    opacity: 1;
+    /* Muestra el contenido al hacer hover */
+}
+
+.card .card-body h5 {
+    color: #fff;
+    /* Color del texto del título */
+}
+
+
+.tarjeta-pequena,
+.tarjeta-grande {
+    height: 500px;
+    /* Altura fija para ambas tarjetas */
+
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center;
+    /* Centra la imagen */
+    position: relative;
+    /* Añadido para el efecto hover */
+    overflow: hidden;
+    /* Añadido para el efecto hover */
+}
+
+.tarjeta-pequena .card,
+.tarjeta-grande .card {
+    height: 100%;
+    /* Ajusta la altura de la tarjeta */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.5s ease;
+    position: absolute;
+    /* Añadido para el efecto hover */
+    top: 0;
+    /* Añadido para el efecto hover */
+    left: 0;
+    /* Añadido para el efecto hover */
+    right: 0;
+    /* Añadido para el efecto hover */
+    bottom: 0;
+    /* Añadido para el efecto hover */
+    padding: 20px;
+    /* Añadido para el efecto hover */
+    color: #000000;
+    /* Añadido para el efecto hover */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Añadido para el efecto hover */
+    transform: scale(0.9);
+    /* Añadido para el efecto hover */
+}
+
+.tarjeta-pequena:hover .card,
+.tarjeta-grande:hover .card {
+    transform: scale(1);
+    /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+.tarjeta-pequena .card-body h5,
+.tarjeta-grande .card-body h5 {
+    color: #000000;
+    /* Color del texto del título */
+}
+
+.tarjeta-pequena:hover .card-body,
+.tarjeta-grande:hover .card-body {
+    background-color: rgba(253, 253, 253, 0.98);
+    /* Fondo del texto al hacer hover */
+}
+
+.tarjeta-pequena {
+    width: 450px;
+}
+
+.tarjeta-grande {
+    width: 850px;
+}
+
+.titulo {
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+
+.texto {
+    color: black;
+    text-align: left;
+}
+
+/*===================INICIO==========================*/
+#hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    /* Utiliza flexbox para centrar los elementos hijos */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    z-index: 1;
+    /* Asegura que el video esté detrás del texto */
+}
+
+.promo {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    position: relative;
+    z-index: 2;
+    /* Asegura que el texto esté encima del video */
+    width: 100%;
+    /* Toma el ancho completo */
+    height: 100%;
+    /* Toma la altura completa */
+    transform: translateY(calc(-50% - 60px));
+    /* Ajusta los 20px para mover el texto hacia arriba como desees */
+}
+
+#text {
+    color: #0a0a0a;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Añade sombra */
+    width: 100%;
+    /* Toma el ancho completo */
+}
+
+
+
+
+
+/*===================CARRUSEL==========================*/
+/* Estilos CSS para centrar el video y el texto */
+/* Estilos CSS para centrar el video */
+.video-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    position: relative;
+    width: 60vw;
+    /* Ancho del contenedor del video al 60% del ancho de la ventana */
+    height: 33.75vw;
+    /* Altura del contenedor para mantener la proporción 16:9 */
+    max-width: 100%;
+    /* Evitar que el contenedor sea más ancho que la ventana */
+    margin: auto;
+    /* Centrar el video */
+    overflow: hidden;
+    /* Evitar que el video se desborde */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ancho del video al 100% del contenedor */
+    height: 80%;
+    /* Altura del video al 100% del contenedor */
+}
+
+.video-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 1;
+    /* Asegura que los controles estén por encima del video */
+}
+
+
+
+
+/*===================EMPRESAS==========================*/
+.icono-empresa {
+    padding: 15px;
+    /* Espaciado igual en todas direcciones */
+    display: flex;
+    justify-content: center;
+    /* Centra los iconos horizontalmente */
+    align-items: center;
+    /* Centra los iconos verticalmente */
+}
+
+img {
+    max-width: 45%;
+    /* Asegura que la imagen no exceda el contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+
+
+/*===================CONTACTO==========================*/
+/* Estilos CSS para un diseño minimalista y moderno */
+.contacto {
+    background-color: #000000;
+    /* Fondo claro para la sección */
+    color: #ffffff;
+    /* Texto oscuro para contraste */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Tipografía moderna y limpia */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Alinear elementos arriba */
+    padding: 40px 0;
+    /* Espaciado vertical */
+}
+
+.contact-info {
+    flex-basis: 45%;
+    /* Ancho de la columna de contacto */
+}
+
+.form-container {
+    flex-basis: 35%;
+    /* Ancho de la columna del formulario */
+    background-color: #000000;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.form-container button:active {
+    scale: 0.95;
+}
+
+.form-container .logo-container {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+    outline: none;
+    border-color: #1778f2;
+}
+
+.form-container .form-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    color: #fff;
+    background-color: #212121;
+    border: none;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin: 12px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.form-container .form-submit-btn:hover {
+    background-color: #313131;
+}
+
+.form-container .link {
+    color: #1778f2;
+    text-decoration: none;
+}
+
+.form-container .signup-link {
+    align-self: center;
+    font-weight: 500;
+}
+
+.form-container .signup-link .link {
+    font-weight: 400;
+}
+
+.form-container .link:hover {
+    text-decoration: underline;
+}
+
+
+/*===================REDES SOCIALES==========================*/
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.redes-sociales a {
+    display: block;
+    margin: 0 10px;
+    width: 120px; /* Tamaño base de los íconos */
+    height: 120px; /* Tamaño base de los íconos */
+}
+
+.redes-sociales img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Evita que se deforme el ícono */
+    opacity: 0.7;
+    transition: transform 0.3s; /* Transición suave al aumentar el tamaño */
+}
+
+.redes-sociales img:hover {
+    opacity: 1;
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+}
+
+.redes-sociales a:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer ícono */
+}
+
+.redes-sociales a:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último ícono */
+}
+
+
+
+/*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
+
+@media (max-width:1200px) {
+    .text-container h1 {
+        font-size: 4rem;
+        /* Tamaño de fuente más pequeño */
+    }
+
+    h2 {
+        font-size: 3rem;
+        /* Tamaño de fuente más pequeño */
+    }
+
+
+    .text-container p {
+        font-size: 1.5rem;
+        /* Tamaño de fuente más pequeño */
+    }
+
+    .video-container {
+        width: 80vw; /* Reducir el ancho del contenedor en pantallas más pequeñas */
+        height: 45vw; /* Reducir la altura del contenedor manteniendo la proporción 16:9 */
+    }
+
+
+    .tarjeta-pequena {
+        width: calc(50% - 15px); /* El 15px es para el margen entre tarjetas */
+    }
+
+    .tarjeta-grande {
+        width: calc(50% - 15px); /* El 15px es para el margen entre tarjetas */
+    }
+   
+}
+
+/*=========================MEDIA QUERIES PANTALLA SM================================*/
+
+@media (max-width:768px) {
+    .text-container h1 {
+        font-size: 3rem;
+        /* Tamaño de fuente aún más pequeño */
+    }
+
+    h2 {
+        font-size: 2rem;
+        /* Tamaño de fuente más pequeño */
+    }
+
+    .text-container p {
+        font-size: 1.2rem;
+        /* Tamaño de fuente aún más pequeño */
+    }
+
+    .video-container {
+        width: 90vw; /* Reducir aún más el ancho del contenedor en pantallas más pequeñas */
+        height: 50.625vw; /* Reducir la altura del contenedor manteniendo la proporción 16:9 */
+    }
+
+    .tarjeta-pequena {
+        width: 100%;
+    }
+
+    .tarjeta-grande {
+        width: 100%;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        /* Cambia la dirección de los elementos a columna */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+    }
+
+    .form-container {
+        width: 100%;
+        /* Ocupa todo el ancho disponible */
+        margin-top: 20px;
+        /* Espacio entre los números de teléfono y el formulario */
+    }
+
+    
+}
+
+/*=========================MEDIA QUERIES PANTALLA EXTRA-SM================================*/
+
+@media (max-width: 576px) {
+    .text-container h1 {
+        font-size: 2rem;
+        /* Tamaño de fuente más pequeño */
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        /* Tamaño de fuente más pequeño */
+    }
+
+
+    .text-container p {
+        font-size: 1rem;
+        /* Tamaño de fuente más pequeño */
+    }
+
+    .video-container {
+        width: 70vw; /* Hacer que el contenedor ocupe todo el ancho de la ventana en pantallas extra pequeñas */
+        height: 60vw; /* Reducir la altura del contenedor manteniendo la proporción 16:9 */
+    }
+
+    .tarjeta-pequena {
+        width: 100%;
+    }
+
+    .tarjeta-grande {
+        width: 100%;
+    }
+
+
+    .flex-container {
+        flex-direction: column;
+        /* Cambia la dirección de los elementos a columna */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+    }
+
+    .form-container {
+        width: 100%;
+        /* Ocupa todo el ancho disponible */
+        margin-top: 20px;
+        /* Espacio entre los números de teléfono y el formulario */
+    }
+    
+
+    
+    
+}

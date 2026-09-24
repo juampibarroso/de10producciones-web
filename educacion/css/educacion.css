@@ -1,0 +1,21 @@
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 1 calc(20% - 20px);
+    /* 20% para 5 tarjetas por fila, menos el espacio entre ellas */
+    max-width: calc(20% - 20px);
+    /* Evitar que las tarjetas se agranden */
+    width: 1rem; /* Cambiar el tamaño de las tarjetas */
+
+}
+
+.card-img-top {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
